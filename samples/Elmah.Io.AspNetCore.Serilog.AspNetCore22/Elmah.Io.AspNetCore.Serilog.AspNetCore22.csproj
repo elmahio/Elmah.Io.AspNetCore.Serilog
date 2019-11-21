@@ -10,7 +10,7 @@
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
     <PackageReference Include="Serilog.AspNetCore" Version="3.0.0" />
-    <PackageReference Include="Serilog.Sinks.ElmahIO" Version="[3.4.0-pre2,4)" />
+    <PackageReference Include="Serilog.Sinks.ElmahIo" Version="3.4.0" />
   </ItemGroup>
 
 

@@ -1,7 +1,22 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
+    <Description>Serilog decorator for ASP.NET Core and elmah.io</Description>
+    <Authors>elmah.io</Authors>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <AssemblyName>Elmah.Io.AspNetCore.Serilog</AssemblyName>
+    <PackageId>Elmah.Io.AspNetCore.Serilog</PackageId>
+    <PackageTags>Error;Exception;Reporing;Management;Logging;ELMAH;Diagnostics;Tracing;Serilog;aspnetcore</PackageTags>
+    <PackageIconUrl>https://secure.gravatar.com/avatar/5c4cb3646528821117abde6d2d5ee22d?s=64</PackageIconUrl>
+    <PackageProjectUrl>https://elmah.io</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/elmahio/Elmah.Io.AspNetCore.Serilog</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
+    <GenerateAssemblyTitleAttribute>false</GenerateAssemblyTitleAttribute>
+    <GenerateAssemblyDescriptionAttribute>false</GenerateAssemblyDescriptionAttribute>
+    <GenerateAssemblyCopyrightAttribute>false</GenerateAssemblyCopyrightAttribute>
+    <!--Will be replaced on AppVeyor to build number-->
+    <Version>1.0.0</Version>
   </PropertyGroup>
 
   <ItemGroup>
