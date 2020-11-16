@@ -11,15 +11,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "samples", "samples", "{4AD3
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Elmah.Io.AspNetCore.Serilog", "src\Elmah.Io.AspNetCore.Serilog\Elmah.Io.AspNetCore.Serilog.csproj", "{31D4E0EB-70DE-43F3-A8EA-085D3A47307B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Elmah.Io.AspNetCore.Serilog.AspNetCore22", "samples\Elmah.Io.AspNetCore.Serilog.AspNetCore22\Elmah.Io.AspNetCore.Serilog.AspNetCore22.csproj", "{1A185C1E-6A96-4B2E-855C-63598F02D96C}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{26EEEC66-4CF4-4BBB-B184-68CF7B8837F0}"
 	ProjectSection(SolutionItems) = preProject
 		appveyor.yml = appveyor.yml
 		README.md = README.md
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Elmah.Io.AspNetCore.Serilog.Tests", "test\Elmah.Io.AspNetCore.Serilog.Tests\Elmah.Io.AspNetCore.Serilog.Tests.csproj", "{DC2A62DC-9010-469C-BE57-52E3EFD5BD88}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Elmah.Io.AspNetCore.Serilog.AspNetCore31", "samples\Elmah.Io.AspNetCore.Serilog.AspNetCore31\Elmah.Io.AspNetCore.Serilog.AspNetCore31.csproj", "{DA789CC1-8FB0-4B6C-89E4-FCF47A84A7DB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -31,22 +29,17 @@ Global
 		{31D4E0EB-70DE-43F3-A8EA-085D3A47307B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{31D4E0EB-70DE-43F3-A8EA-085D3A47307B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{31D4E0EB-70DE-43F3-A8EA-085D3A47307B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{1A185C1E-6A96-4B2E-855C-63598F02D96C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1A185C1E-6A96-4B2E-855C-63598F02D96C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1A185C1E-6A96-4B2E-855C-63598F02D96C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1A185C1E-6A96-4B2E-855C-63598F02D96C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{DC2A62DC-9010-469C-BE57-52E3EFD5BD88}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{DC2A62DC-9010-469C-BE57-52E3EFD5BD88}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{DC2A62DC-9010-469C-BE57-52E3EFD5BD88}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{DC2A62DC-9010-469C-BE57-52E3EFD5BD88}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DA789CC1-8FB0-4B6C-89E4-FCF47A84A7DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA789CC1-8FB0-4B6C-89E4-FCF47A84A7DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA789CC1-8FB0-4B6C-89E4-FCF47A84A7DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA789CC1-8FB0-4B6C-89E4-FCF47A84A7DB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{31D4E0EB-70DE-43F3-A8EA-085D3A47307B} = {5EE152A7-4E24-4BB8-8273-AAC5501F18EA}
-		{1A185C1E-6A96-4B2E-855C-63598F02D96C} = {4AD3861D-0909-4D37-9CBB-D0651856EBED}
-		{DC2A62DC-9010-469C-BE57-52E3EFD5BD88} = {26823017-CE6A-413A-BAE8-B5012F8CBB21}
+		{DA789CC1-8FB0-4B6C-89E4-FCF47A84A7DB} = {4AD3861D-0909-4D37-9CBB-D0651856EBED}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {485F08F9-CFA1-4397-8377-C1395E574C2C}
