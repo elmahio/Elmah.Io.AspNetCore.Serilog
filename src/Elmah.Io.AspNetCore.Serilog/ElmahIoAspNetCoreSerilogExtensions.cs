@@ -2,6 +2,9 @@
 
 namespace Microsoft.AspNetCore.Builder
 {
+    /// <summary>
+    /// This is a helper class to help users install the elmah.io Serilog middleware for ASP.NET Core.
+    /// </summary>
     public static class ElmahIoAspNetCoreSerilogExtensions
     {
         /// <summary>

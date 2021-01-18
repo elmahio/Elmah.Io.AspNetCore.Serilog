@@ -7,15 +7,24 @@ using System.Threading.Tasks;
 
 namespace Elmah.Io.AspNetCore.Serilog
 {
+    /// <summary>
+    /// The elmah.io Serilog middleware for ASP.NET Core automatically pushes HTTP contextual information to Serilog's LogContext.
+    /// </summary>
     public class ElmahIoSerilogMiddleware
     {
         private readonly RequestDelegate _next;
 
+        /// <summary>
+        /// Create a new instance of the middleware. This constructor is called by ASP.NET Core and should never be invoked manually.
+        /// </summary>
         public ElmahIoSerilogMiddleware(RequestDelegate next)
         {
             _next = next;
         }
 
+        /// <summary>
+        /// Called by ASP.NET Core as part of the middleware pipeline. This method should never be invoked manually.
+        /// </summary>
         public async Task Invoke(HttpContext context)
         {
             using (LogContext.PushProperty("url", context.Request?.Path.Value))
