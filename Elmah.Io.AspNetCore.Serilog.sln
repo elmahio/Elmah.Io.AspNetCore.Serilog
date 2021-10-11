@@ -14,12 +14,11 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{26EEEC66-4CF4-4BBB-B184-68CF7B8837F0}"
 	ProjectSection(SolutionItems) = preProject
 		.github\workflows\build.yml = .github\workflows\build.yml
-		README.md = README.md
 	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Elmah.Io.AspNetCore.Serilog.AspNetCore31", "samples\Elmah.Io.AspNetCore.Serilog.AspNetCore31\Elmah.Io.AspNetCore.Serilog.AspNetCore31.csproj", "{DA789CC1-8FB0-4B6C-89E4-FCF47A84A7DB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Elmah.Io.AspNetCore.Serilog.Test", "test\Elmah.Io.AspNetCore.Serilog.Test\Elmah.Io.AspNetCore.Serilog.Test.csproj", "{0B0355D0-D863-43C6-B796-C025D6B6B429}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Elmah.Io.AspNetCore.Serilog.Test", "test\Elmah.Io.AspNetCore.Serilog.Test\Elmah.Io.AspNetCore.Serilog.Test.csproj", "{0B0355D0-D863-43C6-B796-C025D6B6B429}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
