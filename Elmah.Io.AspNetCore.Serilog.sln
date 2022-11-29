@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.29306.81
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33103.184
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{5EE152A7-4E24-4BB8-8273-AAC5501F18EA}"
 EndProject
@@ -19,6 +19,8 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Elmah.Io.AspNetCore.Serilog.AspNetCore31", "samples\Elmah.Io.AspNetCore.Serilog.AspNetCore31\Elmah.Io.AspNetCore.Serilog.AspNetCore31.csproj", "{DA789CC1-8FB0-4B6C-89E4-FCF47A84A7DB}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Elmah.Io.AspNetCore.Serilog.Test", "test\Elmah.Io.AspNetCore.Serilog.Test\Elmah.Io.AspNetCore.Serilog.Test.csproj", "{0B0355D0-D863-43C6-B796-C025D6B6B429}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Elmah.Io.AspNetCore.Serilog.AspNetCore60", "samples\Elmah.Io.AspNetCore.Serilog.AspNetCore60\Elmah.Io.AspNetCore.Serilog.AspNetCore60.csproj", "{2A7B715B-929A-4B88-B059-5BAED3854401}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -38,6 +40,10 @@ Global
 		{0B0355D0-D863-43C6-B796-C025D6B6B429}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0B0355D0-D863-43C6-B796-C025D6B6B429}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0B0355D0-D863-43C6-B796-C025D6B6B429}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2A7B715B-929A-4B88-B059-5BAED3854401}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A7B715B-929A-4B88-B059-5BAED3854401}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A7B715B-929A-4B88-B059-5BAED3854401}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A7B715B-929A-4B88-B059-5BAED3854401}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -46,6 +52,7 @@ Global
 		{31D4E0EB-70DE-43F3-A8EA-085D3A47307B} = {5EE152A7-4E24-4BB8-8273-AAC5501F18EA}
 		{DA789CC1-8FB0-4B6C-89E4-FCF47A84A7DB} = {4AD3861D-0909-4D37-9CBB-D0651856EBED}
 		{0B0355D0-D863-43C6-B796-C025D6B6B429} = {26823017-CE6A-413A-BAE8-B5012F8CBB21}
+		{2A7B715B-929A-4B88-B059-5BAED3854401} = {4AD3861D-0909-4D37-9CBB-D0651856EBED}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {485F08F9-CFA1-4397-8377-C1395E574C2C}
