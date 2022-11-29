@@ -6,7 +6,7 @@
 
   <ItemGroup>
     <PackageReference Include="Serilog.AspNetCore" Version="3.4.0" />
-    <PackageReference Include="Serilog.Sinks.ElmahIo" Version="4.2.21-pre" />
+    <PackageReference Include="Serilog.Sinks.ElmahIo" Version="4.2.23-pre" />
   </ItemGroup>
 
   <ItemGroup>
