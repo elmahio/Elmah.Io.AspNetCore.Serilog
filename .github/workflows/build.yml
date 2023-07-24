@@ -27,11 +27,11 @@ jobs:
     - name: Test
       run: dotnet test --no-restore --verbosity normal
     - name: Pack
-      run: dotnet pack --configuration Release src/Elmah.Io.AspNetCore.Serilog/Elmah.Io.AspNetCore.Serilog.csproj /p:Version=4.1.${{ github.run_number }}
+      run: dotnet pack --configuration Release src/Elmah.Io.AspNetCore.Serilog/Elmah.Io.AspNetCore.Serilog.csproj /p:Version=5.0.${{ github.run_number }}
     - name: Install dotnet-validate
       run: dotnet tool install --global dotnet-validate --version 0.0.1-preview.304
     - name: Validate
-      run: dotnet-validate package local src/Elmah.Io.AspNetCore.Serilog/bin/Release/Elmah.Io.AspNetCore.Serilog.4.1.${{ github.run_number }}.nupkg
+      run: dotnet-validate package local src/Elmah.Io.AspNetCore.Serilog/bin/Release/Elmah.Io.AspNetCore.Serilog.5.0.${{ github.run_number }}.nupkg
     - name: Push to nuget.org
-      run: dotnet nuget push src/Elmah.Io.AspNetCore.Serilog/bin/Release/Elmah.Io.AspNetCore.Serilog.4.1.${{ github.run_number }}.nupkg --api-key ${{ secrets.NUGET_API_KEY }} --source https://api.nuget.org/v3/index.json
+      run: dotnet nuget push src/Elmah.Io.AspNetCore.Serilog/bin/Release/Elmah.Io.AspNetCore.Serilog.5.0.${{ github.run_number }}.nupkg --api-key ${{ secrets.NUGET_API_KEY }} --source https://api.nuget.org/v3/index.json
       if: ${{ github.event_name == 'push' }}
