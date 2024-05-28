@@ -32,10 +32,7 @@ namespace Elmah.Io.AspNetCore.Serilog.Test
             httpContext.Request.Path = new PathString("/test");
             httpContext.Request.Method = "GET";
             httpContext.Response.StatusCode = 404;
-            httpContext.User = new ClaimsPrincipal(new ClaimsIdentity(new Claim[]
-            {
-                new Claim(ClaimTypes.Name, "User")
-            }));
+            httpContext.User = new ClaimsPrincipal(new ClaimsIdentity([new(ClaimTypes.Name, "User")]));
             httpContext.Request.Headers.Add("RequestKey", new StringValues("RequestValue"));
 
             // Act
