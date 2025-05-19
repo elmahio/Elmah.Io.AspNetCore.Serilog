@@ -4,10 +4,11 @@ using NUnit.Framework;
 using Serilog;
 using Serilog.Events;
 using Serilog.Sinks.TestCorrelator;
-using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Security.Claims;
+using System.Text;
 using System.Threading.Tasks;
 
 namespace Elmah.Io.AspNetCore.Serilog.Test
@@ -33,7 +34,21 @@ namespace Elmah.Io.AspNetCore.Serilog.Test
             httpContext.Request.Method = "GET";
             httpContext.Response.StatusCode = 404;
             httpContext.User = new ClaimsPrincipal(new ClaimsIdentity([new(ClaimTypes.Name, "User")]));
-            httpContext.Request.Headers.Add("RequestKey", new StringValues("RequestValue"));
+            httpContext.Request.Headers["RequestKey"] = "RequestValue";
+            httpContext.Request.ContentType = "multipart/form-data; boundary=----TestBoundary";
+
+            var multipartContent = new StringBuilder();
+            multipartContent.AppendLine("------TestBoundary");
+            multipartContent.AppendLine("Content-Disposition: form-data; name=\"myField\"");
+            multipartContent.AppendLine();
+            multipartContent.AppendLine("my value");
+            multipartContent.AppendLine("------TestBoundary--");
+
+            var bodyBytes = Encoding.UTF8.GetBytes(multipartContent.ToString());
+            httpContext.Request.Body = new MemoryStream(bodyBytes);
+            httpContext.Request.ContentLength = bodyBytes.Length;
+
+            httpContext.Request.EnableBuffering();
 
             // Act
             IEnumerable<LogEvent> logEvents = null;
