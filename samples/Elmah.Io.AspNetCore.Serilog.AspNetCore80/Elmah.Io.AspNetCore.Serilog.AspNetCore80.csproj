@@ -8,7 +8,7 @@
 
   <ItemGroup>
     <PackageReference Include="Serilog.AspNetCore" Version="8.0.1" />
-    <PackageReference Include="Serilog.Sinks.ElmahIo" Version="5.1.43" />
+    <PackageReference Include="Serilog.Sinks.ElmahIo" Version="5.3.52-pre" />
   </ItemGroup>
 
   <ItemGroup>
