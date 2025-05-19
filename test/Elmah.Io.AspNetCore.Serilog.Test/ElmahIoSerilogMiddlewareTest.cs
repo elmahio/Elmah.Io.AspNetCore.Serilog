@@ -39,7 +39,8 @@ namespace Elmah.Io.AspNetCore.Serilog.Test
 
             var multipartContent = new StringBuilder();
             multipartContent.AppendLine("------TestBoundary");
-            multipartContent.AppendLine("Content-Disposition: form-data; name=\"myField\"");
+            multipartContent.AppendLine("Content-Disposition: form-data; name=\"myField\"; filename=\"dummy.txt\"");
+            multipartContent.AppendLine("Content-Type: text/plain");
             multipartContent.AppendLine();
             multipartContent.AppendLine("my value");
             multipartContent.AppendLine("------TestBoundary--");
