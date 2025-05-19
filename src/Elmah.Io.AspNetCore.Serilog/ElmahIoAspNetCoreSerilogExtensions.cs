@@ -1,6 +1,8 @@
 ﻿using Elmah.Io.AspNetCore.Serilog;
 
+#pragma warning disable IDE0130 // Namespace does not match folder structure
 namespace Microsoft.AspNetCore.Builder
+#pragma warning restore IDE0130 // Namespace does not match folder structure
 {
     /// <summary>
     /// This is a helper class to help users install the elmah.io Serilog middleware for ASP.NET Core.

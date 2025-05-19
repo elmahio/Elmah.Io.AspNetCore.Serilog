@@ -10,17 +10,12 @@ namespace Elmah.Io.AspNetCore.Serilog
     /// <summary>
     /// The elmah.io Serilog middleware for ASP.NET Core automatically pushes HTTP contextual information to Serilog's LogContext.
     /// </summary>
-    public class ElmahIoSerilogMiddleware
+    /// <remarks>
+    /// Create a new instance of the middleware. This constructor is called by ASP.NET Core and should never be invoked manually.
+    /// </remarks>
+    public class ElmahIoSerilogMiddleware(RequestDelegate next)
     {
-        private readonly RequestDelegate _next;
-
-        /// <summary>
-        /// Create a new instance of the middleware. This constructor is called by ASP.NET Core and should never be invoked manually.
-        /// </summary>
-        public ElmahIoSerilogMiddleware(RequestDelegate next)
-        {
-            _next = next;
-        }
+        private readonly RequestDelegate _next = next;
 
         /// <summary>
         /// Called by ASP.NET Core as part of the middleware pipeline. This method should never be invoked manually.
@@ -38,31 +33,35 @@ namespace Elmah.Io.AspNetCore.Serilog
                 await _next.Invoke(context);
         }
 
-        private Dictionary<string, string> QueryString(HttpContext context)
+        private static Dictionary<string, string> QueryString(HttpContext context)
         {
             return context.Request?.Query?.Keys.ToDictionary(k => k, k => context.Request.Query[k].ToString());
         }
 
-        private Dictionary<string, string> Form(HttpContext context)
+        private static Dictionary<string, string> Form(HttpContext context)
         {
             try
             {
-                return context.Request?.Form?.Keys.ToDictionary(k => k, k => context.Request.Form[k].ToString());
+                var contentType = context.Request.ContentType;
+                if (!string.IsNullOrWhiteSpace(contentType) && contentType.StartsWith("multipart/form-data"))
+                {
+                    return context.Request?.Form?.Keys.ToDictionary(k => k, k => context.Request.Form[k].ToString());
+                }
             }
-            catch (InvalidOperationException)
+            catch (Exception ex) when (ex is InvalidOperationException || ex is System.IO.InvalidDataException)
             {
                 // Request not a form POST or similar
             }
 
-            return new Dictionary<string, string>();
+            return [];
         }
 
-        private Dictionary<string, string> Cookies(HttpContext context)
+        private static Dictionary<string, string> Cookies(HttpContext context)
         {
             return context.Request?.Cookies?.Keys.ToDictionary(k => k, k => context.Request.Cookies[k].ToString());
         }
 
-        private Dictionary<string, string> ServerVariables(HttpContext context)
+        private static Dictionary<string, string> ServerVariables(HttpContext context)
         {
             return context.Request?.Headers?.Keys.ToDictionary(k => k, k => context.Request.Headers[k].ToString());
         }
